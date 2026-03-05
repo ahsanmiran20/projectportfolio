@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahsan Miran Portfolio</title>
 
 <!-- Font Awesome -->
@@ -11,7 +12,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #121212;
+    background: linear-gradient(180deg, #121212 0%, #1f1f1f 100%);
     color: #e0e0e0;
 }
 
@@ -37,11 +38,13 @@ header p {
     max-width: 1000px;
     margin: 30px auto;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Sidebar */
 .sidebar {
     flex: 1;
+    min-width: 250px;
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 15px;
@@ -53,6 +56,7 @@ header p {
     border-radius: 50%;
     border: 3px solid #e0e0e0;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 .sidebar h3 {
     margin: 10px 0 5px 0;
@@ -124,7 +128,8 @@ table th {
     background-color: #1f1f1f;
     padding: 30px;
     border-radius: 15px;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
 }
 .modal-content h2 { margin-top: 0; }
 .modal-content input, .modal-content textarea {
@@ -169,7 +174,11 @@ footer {
     color: #777;
 }
 
-@media(max-width:900px){ .container{ flex-direction: column; } }
+/* Mobile Responsive */
+@media(max-width:900px){
+    .container{ flex-direction: column; }
+    .main-content, .sidebar { width: 100%; }
+}
 </style>
 </head>
 <body>
@@ -188,20 +197,19 @@ footer {
         <p>Passionate Web Developer</p>
 
         <div class="link-icons">
-    <a href="https://www.facebook.com/share/18Hcn2oNwE/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/ahsanmiran_" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://x.com/asstraw1101" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://github.com/ahsanmiran20" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://wa.me/qr/AB3DINRXDNO7G1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:ahsanmiran20@gmail.com"><i class="fas fa-envelope"></i></a>
-</div>
+            <a href="https://www.facebook.com/share/18Hcn2oNwE/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ahsanmiran_" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/asstraw1101" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/ahsanmiran20" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/qr/AB3DINRXDNO7G1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:ahsanmiran20@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
 
         <a class="contact-btn" onclick="openModal()">Contact Me</a>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-
         <section>
             <h2>About Me</h2>
             <p>My name is <b>Ahsan Miran</b>, a dedicated Computer Science student passionate about web development and cybersecurity. I enjoy creating clean, functional, and modern projects while continuously learning new technologies.</p>
@@ -209,7 +217,7 @@ footer {
 
         <section>
             <h2>Hobbies & Skills</h2>
-            <div style="display:flex; gap:20px;">
+            <div style="display:flex; flex-wrap: wrap; gap:20px;">
                 <div><strong>Hobbies:</strong>
                     <ol>
                         <li>Reading</li>
@@ -236,9 +244,7 @@ footer {
                 <tr><td>BSc</td><td>International Islamic University Chattogram</td><td>3.50</td></tr>
             </table>
         </section>
-
     </div>
-
 </div>
 
 <!-- Contact Modal -->
