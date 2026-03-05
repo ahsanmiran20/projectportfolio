@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ahsan Miran Portfolio</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f;
+    padding: 40px 0;
+    text-align: center;
+}
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #aaa;
+}
+
+/* Container */
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 30px auto;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+.sidebar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+.sidebar h3 {
+    margin: 10px 0 5px 0;
+}
+.sidebar p {
+    color: #aaa;
+}
+
+/* Social Icons */
+.sidebar .link-icons a {
+    display: inline-block;
+    margin: 8px;
+    font-size: 1.5em;
+    color: #e0e0e0;
+    transition: 0.3s;
+}
+.sidebar .link-icons a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Main Content */
+.main-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+}
+section h2 {
+    border-bottom: 2px solid #e0e0e0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table th, table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+table th {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Contact Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+}
+.modal-content h2 { margin-top: 0; }
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+.modal-content input[type="submit"] {
+    background-color: #e0e0e0;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modal-content input[type="submit"]:hover {
+    background-color: #fff;
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-btn:hover { background-color: #fff; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+@media(max-width:900px){ .container{ flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Ahsan Miran</h1>
+    <p>Computer Science & Engineering | Web Development | Cybersecurity Enthusiast</p>
+</header>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="mypic.jpg.jpeg" alt="Ahsan Miran">
+        <h3>Ahsan Miran</h3>
+        <p>Passionate Web Developer</p>
+
+        <div class="link-icons">
+    <a href="https://www.facebook.com/share/18Hcn2oNwE/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/ahsanmiran_" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com/asstraw1101" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://github.com/ahsanmiran20" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://wa.me/qr/AB3DINRXDNO7G1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:ahsanmiran20@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+
+        <a class="contact-btn" onclick="openModal()">Contact Me</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <section>
+            <h2>About Me</h2>
+            <p>My name is <b>Ahsan Miran</b>, a dedicated Computer Science student passionate about web development and cybersecurity. I enjoy creating clean, functional, and modern projects while continuously learning new technologies.</p>
+        </section>
+
+        <section>
+            <h2>Hobbies & Skills</h2>
+            <div style="display:flex; gap:20px;">
+                <div><strong>Hobbies:</strong>
+                    <ol>
+                        <li>Reading</li>
+                        <li>Traveling</li>
+                        <li>Gaming</li>
+                    </ol>
+                </div>
+                <div><strong>Skills:</strong>
+                    <ul>
+                        <li>HTML / CSS</li>
+                        <li>C++</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Academic Results</h2>
+            <table>
+                <tr><th>Exam</th><th>Institution</th><th>GPA</th></tr>
+                <tr><td>SSC</td><td>Government Muslim High School</td><td>5.00</td></tr>
+                <tr><td>HSC</td><td>Chattogram Cantonment Public College</td><td>5.00</td></tr>
+                <tr><td>BSc</td><td>International Islamic University Chattogram</td><td>3.50</td></tr>
+            </table>
+        </section>
+
+    </div>
+
+</div>
+
+<!-- Contact Modal -->
+<div class="modal" id="contactModal">
+    <div class="modal-content">
+        <h2>Contact Me</h2>
+        <form>
+            Name: <input type="text" placeholder="Your Name">
+            Email: <input type="text" placeholder="Your Email">
+            Message: <textarea rows="4" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+        <a style="display:block; text-align:right; margin-top:10px; color:#aaa; cursor:pointer;" onclick="closeModal()">Close</a>
+    </div>
+</div>
+
+<footer>
+    © 2026 Ahsan Miran. All Rights Reserved.
+</footer>
+
+<script>
+function openModal(){ document.getElementById('contactModal').style.display='flex'; }
+function closeModal(){ document.getElementById('contactModal').style.display='none'; }
+</script>
+
+</body>
+</html>
